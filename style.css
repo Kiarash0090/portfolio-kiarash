@@ -135,4 +135,44 @@ body {
     text-align: center;
   }
 }
+/* Mobile menu button */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .navbar a {
+    margin: 15px 0;
+    font-size: 1.2rem;
+  }
+}
 
